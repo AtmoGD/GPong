@@ -209,6 +209,8 @@ public class LevelController : MonoBehaviour
 
         if (leftEndState != EndState.Won && rightEndState != EndState.Won)
             GameManager.Instance.StartCountdown();
+        else
+            GameManager.Instance.EndGame(leftEndState == EndState.Won ? "Left" : "Right", leftEndState == EndState.Won ? paddleLeft : paddleRight);
     }
 
     public void ResetLevel(bool _resetPaddles = false, bool _resetBall = false)

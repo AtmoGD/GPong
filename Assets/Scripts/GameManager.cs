@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject menuScreen;
     [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private TMP_Text gameOverText;
     [SerializeField] private CountdownController countdownController;
     [SerializeField] private TMP_Text typeLeftText;
     [SerializeField] private TMP_Text colorLeftText;
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float buttonDelay = 0.5f;
+    [SerializeField] private float endGameDelay = 2f;
     [SerializeField] private float onAwakeLoadingDelay = 0.1f;
     [SerializeField] private List<ColorData> colorData = new List<ColorData>();
     [SerializeField] private List<Difficulty> difficultyData = new List<Difficulty>();
@@ -81,6 +84,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        menuScreen.SetActive(true);
+        pauseScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
+
         sfxSlider.value = PlayerPrefs.GetFloat("SFX", 1);
         UpdateSound(sfxSlider.value);
         StartCoroutine(NewLevelIn(onAwakeLoadingDelay));
@@ -117,6 +124,7 @@ public class GameManager : MonoBehaviour
         // LevelController.StartLevel();
         menuScreen.SetActive(false);
         pauseScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
         StartCountdown();
     }
 
@@ -124,6 +132,25 @@ public class GameManager : MonoBehaviour
     {
         countdownController.StartCountdown();
     }
+    #endregion
+
+    #region EndGame
+    public void EndGame(string _winner, Paddle _paddle)
+    {
+        StartCoroutine(EndGameIn(endGameDelay, _winner, _paddle));
+    }
+
+    IEnumerator EndGameIn(float _time, string _winner, Paddle _paddle)
+    {
+        yield return new WaitForSecondsRealtime(_time);
+        menuScreen.SetActive(false);
+        pauseScreen.SetActive(false);
+        gameOverScreen.SetActive(true);
+        gameOverText.text = _winner;
+        gameOverText.color = _paddle.Color;
+        // gameOverText.faceColor = _paddle.Color;
+    }
+
     #endregion
 
     #region Pause
@@ -170,6 +197,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         menuScreen.SetActive(true);
         pauseScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
     }
     #endregion
 
