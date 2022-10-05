@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1791990488953902010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 283668633436988095, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: actionsNeededMultiplier
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202345, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_Name
+      value: AIvsAILevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509080927059202347, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956529333589717597, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 8336eb05ebf025348876f3ece49e80aa, type: 3}
+    - target: {fileID: 7956529333589717597, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956529333589717597, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4509080927310814550, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+    - {fileID: 4509080927310814545, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+--- !u!114 &771230479278979041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1327888791718421595, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+  m_PrefabInstance: {fileID: 1791990488953902010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514713886555220407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0e6ccd9bcfd0845a608627bf9f5dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8514713886555220407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7995080042210949645, guid: 1b8b9ab7fb7af944dbae31a15b6b540f, type: 3}
+  m_PrefabInstance: {fileID: 1791990488953902010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1109460587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514713886555220407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d959d17e455094c4cb839ca96cfcc88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  paddle: {fileID: 771230479278979041}
+  actionsNeededMultiplier: 0.001
+--- !u!114 &1109460588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514713886555220407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 5
+  TakeActionsBetweenDecisions: 0
+--- !u!114 &1109460589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8514713886555220407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 15
+    NumStackedVectorObservations: 20
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 0200000002000000
+    VectorActionSize: 0200000002000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 5022602860645237092, guid: 8336eb05ebf025348876f3ece49e80aa, type: 3}
+  m_InferenceDevice: 1
+  m_BehaviorType: 0
+  m_BehaviorName: PaddleBehaviour
+  TeamId: 1
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
