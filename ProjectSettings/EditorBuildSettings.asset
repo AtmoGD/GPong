@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AITrainingSIngle.unity
-    guid: 8075a9d0d847f254eba0fea322b1f087
+    path: Assets/Scenes/Menu.unity
+    guid: 23ddfd246e9de5040a74f5101a122f4d
   m_configObjects: {}
