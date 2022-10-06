@@ -104,7 +104,8 @@ MonoBehaviour:
   levelController: {fileID: 0}
   color: {r: 0.80784315, g: 0.33333334, b: 1, a: 1}
   rb: {fileID: 2143394580209649439}
-  speed: 10
+  speed: 13
+  jumpSound: PaddleJump
 --- !u!50 &2143394580209649439
 Rigidbody2D:
   serializedVersion: 4
@@ -238,6 +239,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 12f6e0da-5f5f-45db-8f9f-768912fc603c
     m_ActionName: Multiplayer/RightDown[/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 274fb1fa-31ed-4323-9760-0fef2684404f
+    m_ActionName: UI/Pause[/Keyboard/escape,/Keyboard/p,/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Multiplayer

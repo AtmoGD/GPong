@@ -12,6 +12,8 @@ public class Ball : MonoBehaviour
     [SerializeField] private float paddleInfluence = 0.1f;
     [SerializeField] private float minXSpeed = 0.3f;
     [SerializeField] private string hitSound = "BallHit";
+    [SerializeField] private Vector2 randomDirectionX = new Vector2(-1f, 1f);
+    [SerializeField] private Vector2 randomDirectionY = new Vector2(-0.2f, 0.2f);
 
     public Rigidbody2D Rb { get; private set; }
     public float Speed { get { return speed * levelController.TimeScale; } }
@@ -46,13 +48,14 @@ public class Ball : MonoBehaviour
         Rb.velocity = Direction * Speed;
     }
 
-    private void Update() {
+    private void Update()
+    {
         SetNewDirection(Direction);
     }
 
     private Vector2 GetRandomDirection()
     {
-        return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        return new Vector2(Random.Range(randomDirectionX.x, randomDirectionX.y), Random.Range(randomDirectionY.x, randomDirectionY.y)).normalized;
     }
 
     private void UpdatePaddle(Paddle _paddle)

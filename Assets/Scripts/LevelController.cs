@@ -185,6 +185,8 @@ public class LevelController : MonoBehaviour
 
     public void BallHitGoal()
     {
+        if (!LevelStarted) return;
+
         EndState leftEndState = paddleLeft.Score >= maxScore ? EndState.Won : EndState.Lost;
         EndState rightEndState = paddleRight.Score >= maxScore ? EndState.Won : EndState.Lost;
 

@@ -147,7 +147,10 @@ public class GameManager : MonoBehaviour
         pauseScreen.SetActive(false);
         gameOverScreen.SetActive(true);
         gameOverText.text = _winner;
-        gameOverText.color = _paddle.Color;
+        Color newColor = _paddle.Color;
+        newColor.a = gameOverText.color.a;
+        gameOverText.color = newColor;
+
         // gameOverText.faceColor = _paddle.Color;
     }
 
