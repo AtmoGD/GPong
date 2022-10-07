@@ -203,7 +203,6 @@ public class LevelController : MonoBehaviour
             paddleRight.EndGame(rightEndState);
         }
 
-        // ResetLevel(!draw, true);
         ResetLevel(false, false);
         UpdateScore();
 

@@ -83,10 +83,10 @@ public class EnemyController : Agent
         if (doAction == 0) return;
 
 
-        // bool flipAction = Random.value < percentOfDeclineAction;
+        bool flipAction = Random.value < percentOfDeclineAction;
 
-        // if (flipAction)
-        //     action = action == 0 ? 1 : 0;
+        if (flipAction)
+            action = action == 0 ? 1 : 0;
 
         actionsNeeded++;
 

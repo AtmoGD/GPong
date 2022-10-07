@@ -13,7 +13,6 @@ namespace AudioManagement
     [System.Serializable, CreateAssetMenu(fileName = "New Sound", menuName = "Audio/Sound")]
     public class Sound : ScriptableObject
     {
-        // public new string name;
         public AudioClip clip;
 
         private float volume = 1f;

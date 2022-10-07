@@ -121,7 +121,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(_time);
         Time.timeScale = 1;
         NewLevel();
-        // LevelController.StartLevel();
         menuScreen.SetActive(false);
         pauseScreen.SetActive(false);
         gameOverScreen.SetActive(false);
@@ -150,8 +149,6 @@ public class GameManager : MonoBehaviour
         Color newColor = _paddle.Color;
         newColor.a = gameOverText.color.a;
         gameOverText.color = newColor;
-
-        // gameOverText.faceColor = _paddle.Color;
     }
 
     #endregion
