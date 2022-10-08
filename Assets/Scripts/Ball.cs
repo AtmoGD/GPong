@@ -8,6 +8,7 @@ public class Ball : MonoBehaviour
 {
     [SerializeField] private bool StartOnPlay = true;
     [SerializeField] private LevelController levelController;
+    [SerializeField] private TrailRenderer trailRenderer;
     [SerializeField] private float speed = 30f;
     [SerializeField] private float paddleInfluence = 0.1f;
     [SerializeField] private float minXSpeed = 0.3f;
@@ -61,7 +62,14 @@ public class Ball : MonoBehaviour
     private void UpdatePaddle(Paddle _paddle)
     {
         LastPaddle = _paddle;
-        BallSprite.color = _paddle.Color;
+
+        Color startColor = _paddle.Color;
+        Color endColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+        BallSprite.color = startColor;
+
+        trailRenderer.startColor = startColor;
+        trailRenderer.endColor = endColor;
     }
 
     public void ResetBall()
